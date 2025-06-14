@@ -1,0 +1,66 @@
+/* Global */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 4rem;
+    font-family: "Do Hyeon";
+}
+
+p {
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.icon {
+    color: black;
+}
+
+footer {
+    display: inline-block;
+    align-content: center;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(238, 238, 238);
+}
+
+/* wip.html */
+
+.wip-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 40vh;
+}
+
+.wip-container .header-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#icon-wip{
+    font-size: 3rem;
+    color: rgb(42, 191, 255);
+}
+
+.wip-container h1 {
+    color: rgb(42, 191, 255);
+}
+
+.wip-container p {
+    margin-left: 10%;
+    margin-right: 10%;
+}
