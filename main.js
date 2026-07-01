@@ -18,23 +18,21 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    const observer = new IntersectionObserver(
-        (entries) => {
-            const visibleEntry = entries
-                .filter((entry) => entry.isIntersecting)
-                .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    const updateActiveSection = () => {
+        const offset = 140;
+        let activeSectionId = sections[0]?.id;
+        let smallestDistance = Number.POSITIVE_INFINITY;
 
-            if (visibleEntry) {
-                setActiveTab(visibleEntry.target.id);
+        sections.forEach((section) => {
+            const distance = Math.abs(section.getBoundingClientRect().top - offset);
+            if (distance < smallestDistance) {
+                smallestDistance = distance;
+                activeSectionId = section.id;
             }
-        },
-        {
-            rootMargin: "-40% 0px -40% 0px",
-            threshold: [0.2, 0.4, 0.6],
-        }
-    );
+        });
 
-    sections.forEach((section) => observer.observe(section));
+        setActiveTab(activeSectionId);
+    };
 
     const handleHashChange = () => {
         const hash = window.location.hash.replace("#", "");
@@ -43,6 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
     window.addEventListener("hashchange", handleHashChange);
+    updateActiveSection();
     handleHashChange();
 });

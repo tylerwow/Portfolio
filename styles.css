@@ -60,6 +60,77 @@ main {
     padding: 0 40px 120px;
 }
 
+.home-section {
+    justify-content: center;
+    padding-top: 96px;
+}
+
+.about-me-layout {
+    display: grid;
+    grid-template-columns: minmax(220px, 320px) 1fr;
+    gap: 36px;
+    align-items: center;
+}
+
+.about-me-photo {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-placeholder {
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 1 / 1;
+    border-radius: 24px;
+    background-color: #f0f0f0;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+}
+
+.photo-placeholder i {
+    font-size: 5rem;
+    color: #6b7280;
+}
+
+.about-me-copy h1 {
+    margin-bottom: 12px;
+}
+
+.about-me-intro {
+    margin: 0 0 16px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 680px;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-links a:hover {
+    color: #111;
+}
+
+.contact-links i {
+    width: 18px;
+    text-align: center;
+}
+
 .page-section {
     min-height: calc(100dvh - 72px);
     display: flex;
@@ -136,8 +207,9 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 32px 40px 36px;
+    justify-content: flex-start;
+    padding: 36px 40px 56px;
+    gap: 28px;
 }
 
 .back-link {
@@ -155,9 +227,9 @@ main {
 .project-hero {
     display: grid;
     grid-template-columns: 1.05fr 0.95fr;
-    gap: 28px;
+    gap: 32px;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
 }
 
 .project-label {
@@ -277,13 +349,14 @@ main {
 .project-details {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    gap: 24px;
+    margin-top: 8px;
 }
 
 .detail-card {
     background: white;
     border-radius: 18px;
-    padding: 16px;
+    padding: 20px 20px 22px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
 
@@ -299,17 +372,50 @@ main {
     line-height: 1.6;
 }
 
+.cv-section {
+    justify-content: flex-start;
+    padding-top: 88px;
+}
+
+.cv-download {
+    margin: 8px 0 24px;
+}
+
+.cv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.cv-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+.cv-card ul {
+    margin: 0;
+    padding-left: 18px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.cv-card li + li {
+    margin-top: 6px;
+}
+
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 16px 40px;
+    padding: 20px 40px 24px;
     background-color: white;
     border-top: 1px solid #e0e0e0;
     box-sizing: border-box;
     box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.04);
     margin-top: auto;
+    gap: 20px;
 }
 
 .email-container {
