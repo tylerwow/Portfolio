@@ -28,6 +28,7 @@ h1 {
     position: sticky;
     top: 0;
     z-index: 1000;
+    opacity: 0.98;
 }
 
 .brand {
@@ -191,6 +192,29 @@ main {
     padding: 16px 18px 20px;
 }
 
+.home-project-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+}
+
+.featured-label {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background-color: #111;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+}
+
 .project-content h3 {
     margin: 0 0 8px;
     font-size: 1.1rem;
@@ -253,6 +277,15 @@ main {
     line-height: 1.7;
     color: #555;
     max-width: 640px;
+}
+
+.detail-card a {
+    color: #111;
+    text-decoration: underline;
+}
+
+.detail-card a:hover {
+    color: #000;
 }
 
 .action-buttons {
