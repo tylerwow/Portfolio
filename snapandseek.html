@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Snap + Seek | Tyler Evans</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="Assets/FontAwesome/css/all.css" type="text/css" rel="stylesheet">
+        <link href="styles.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="topbar">
+            <a href="index.html#home" class="brand">Tyler Evans</a>
+            <nav class="nav-tabs" aria-label="Primary">
+                <a href="index.html#home" class="nav-tab">Home</a>
+                <a href="index.html#projects" class="nav-tab active">Projects</a>
+                <a href="index.html#cv" class="nav-tab">CV</a>
+            </nav>
+        </header>
+
+        <main class="project-page-main">
+            <a href="index.html#projects" class="back-link">← Back to Projects</a>
+
+            <section class="project-hero">
+                <div class="project-copy">
+                    <h1>Snap + Seek</h1>
+                    <p class="project-description">
+                        Snap + Seek is a mobile application that uses the device’s camera to play a game. The application provides the user with an item to find and to take a picture of within a certain time frame. If the picture matches the item, then a point is scored and time is added to the timer. The goal of the game is to find as many items as possible before the timer ends. 
+                    </p>
+                    
+                    <div class="action-buttons">
+                        <a href="https://github.com/tylerwow/Snap-And-Seek/releases/" target="_blank" rel="noopener noreferrer" class="action-btn primary">
+                            <i class="fas fa-download"></i>
+                            <span>Download</span>
+                        </a>
+                        <a href="Assets/Files/SnapAndSeekReport.pdf" download class="action-btn secondary">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Report</span>
+                        </a>
+                        <a href="https://github.com/tylerwow/Snap-And-Seek" target="_blank" rel="noopener noreferrer" class="action-btn secondary">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-gallery">
+                    <div class="gallery-frame">
+                        <button class="gallery-arrow left" id="gallery-prev" type="button" aria-label="Previous image">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <img id="project-main-image" src="Assets/Images/Dead%20End.png" alt="Project preview image">
+                        <button class="gallery-arrow right" id="gallery-next" type="button" aria-label="Next image">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-details">
+                <article class="detail-card">
+                    <h2>Why?</h2>
+                    <p>This game was created for the <a href="https://www.york.ac.uk/students/studying/manage/programmes/module-catalogue/module/TFT00069H/latest" target="_blank" rel="noopener noreferrer">Mobile Interaction</a> module at the University of York.</p>
+                </article>
+
+                <article class="detail-card">
+                    <h2>Tools</h2>
+                    <p>The game was created using Android Studio and the Kotlin programming language. The app uses Google's  <a href="https://developers.google.com/ml-kit/vision/image-labeling" target="_blank" rel="noopener noreferrer">ML Kit Image Labelling API</a>.</p>
+                </article>
+
+                <article class="detail-card">
+                    <h2>Outcome</h2>
+                    <p>This project earned a 1st class grade (71%), successfully implementing a mobile application that functions correctly using APIs.</p>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <div class="email-container">
+                <a href="mailto:tylerjoshuaevans2005@gmail.com" class="footer-email">tylerjoshuaevans2005@gmail.com</a>
+            </div>
+
+            <p>© <span id="year"></span> Tyler Evans. All rights reserved.</p>
+            
+            <div class="social-icons">
+                <a href="https://github.com/tylerwow" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/tyler-evans-uk" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </footer>
+
+        <script src="home.js"></script>
+        <script src="main.js"></script>
+        <script>
+            const images = [
+                'Assets/Images/SnapAndSeek1.png',
+                'Assets/Images/SnapAndSeek2.png',
+                'Assets/Images/SnapAndSeek3.png'
+            ];
+            const mainImage = document.getElementById('project-main-image');
+            const prevButton = document.getElementById('gallery-prev');
+            const nextButton = document.getElementById('gallery-next');
+            let activeIndex = 0;
+
+            const updateGallery = () => {
+                mainImage.src = images[activeIndex];
+                prevButton.disabled = activeIndex === 0;
+                nextButton.disabled = activeIndex === images.length - 1;
+            };
+
+            prevButton.addEventListener('click', () => {
+                if (activeIndex > 0) {
+                    activeIndex -= 1;
+                    updateGallery();
+                }
+            });
+
+            nextButton.addEventListener('click', () => {
+                if (activeIndex < images.length - 1) {
+                    activeIndex += 1;
+                    updateGallery();
+                }
+            });
+
+            updateGallery();
+        </script>
+    </body>
+</html>
