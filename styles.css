@@ -327,6 +327,9 @@ main {
     border-radius: 24px;
     padding: 16px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .gallery-frame {
@@ -379,6 +382,24 @@ main {
 
 .gallery-arrow.right {
     right: 12px;
+}
+
+.project-gallery .game-frame {
+    width: 600px;
+    max-width: 100%;
+    height: 450px;
+    max-height: 100%;
+    overflow: hidden;
+    background: transparent;
+    border: none;
+}
+
+.project-gallery .game-embed {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+    background: transparent;
 }
 
 .project-details {

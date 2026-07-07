@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Zombie Attack | Tyler Evans</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="Assets/FontAwesome/css/all.css" type="text/css" rel="stylesheet">
+        <link href="styles.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="topbar">
+            <a href="index.html#home" class="brand">Tyler Evans</a>
+            <nav class="nav-tabs" aria-label="Primary">
+                <a href="index.html#home" class="nav-tab">Home</a>
+                <a href="index.html#projects" class="nav-tab active">Projects</a>
+                <a href="index.html#cv" class="nav-tab">CV</a>
+            </nav>
+        </header>
+
+        <main class="project-page-main">
+            <a href="index.html#projects" class="back-link">← Back to Projects</a>
+
+            <section class="project-hero">
+                <div class="project-copy">
+                    <h1>Zombie Attack</h1>
+                    <p class="project-description">
+                        Zombie Attack is a web-based top-down zombie shooter. The player is equipped with a gun and must escape the zombie-infested area. Players will find a number of collectibles as they progress, including keys and medkits. Keys will allow the player to unlock doors and medkits will restore health points. The player can also interact with and rescue a number of NPCs.
+                    </p>
+                    
+                    <div class="action-buttons">
+                        <a href="Assets/Files/ZombieAttackReport.pdf" download class="action-btn secondary">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Report</span>
+                        </a>
+                        <a href="https://github.com/tylerwow/Zombie-Attack" target="_blank" rel="noopener noreferrer" class="action-btn secondary">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-gallery">
+                    <div class="game-frame">
+                        <iframe
+                            class="game-embed"
+                            src="https://tylerwow.github.io/Zombie-Attack/"
+                            title="Zombie Attack game"
+                            loading="lazy"
+                            allow="fullscreen"
+                            scrolling="no"
+                        ></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-details">
+                <article class="detail-card">
+                    <h2>Why?</h2>
+                    <p>This game was created for the <a href="https://www.york.ac.uk/students/studying/manage/programmes/module-catalogue/module/TFT00044C/latest" target="_blank" rel="noopener noreferrer">Programming for Digital Media (Part II)</a> module at the University of York.</p>
+                </article>
+
+                <article class="detail-card">
+                    <h2>Tools</h2>
+                    <p>The game was created using Javascript and the p5.js library.</p>
+                </article>
+
+                <article class="detail-card">
+                    <h2>Outcome</h2>
+                    <p>This project overall earned a First class grade (86%).</p>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <div class="email-container">
+                <a href="mailto:tylerjoshuaevans2005@gmail.com" class="footer-email">tylerjoshuaevans2005@gmail.com</a>
+            </div>
+
+            <p>© <span id="year"></span> Tyler Evans. All rights reserved.</p>
+            
+            <div class="social-icons">
+                <a href="https://github.com/tylerwow" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/tyler-evans-uk" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </footer>
+
+        <script src="home.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
