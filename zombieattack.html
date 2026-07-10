@@ -10,12 +10,24 @@
     <body>
         <header class="topbar">
             <a href="index.html#home" class="brand">Tyler Evans</a>
+            <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="nav-tabs" aria-label="Primary">
                 <a href="index.html#home" class="nav-tab">Home</a>
                 <a href="index.html#projects" class="nav-tab active">Projects</a>
                 <a href="index.html#cv" class="nav-tab">CV</a>
             </nav>
         </header>
+
+        <div class="nav-overlay" hidden></div>
+        <nav class="nav-drawer" aria-label="Mobile">
+            <a href="index.html#home" class="nav-tab">Home</a>
+            <a href="index.html#projects" class="nav-tab active">Projects</a>
+            <a href="index.html#cv" class="nav-tab">CV</a>
+        </nav>
 
         <main class="project-page-main">
             <a href="index.html#projects" class="back-link">← Back to Projects</a>
@@ -40,6 +52,12 @@
                 </div>
 
                 <div class="project-gallery">
+                    <div class="desktop-only-notice">
+                        <i class="fas fa-desktop"></i>
+                        <h2>Desktop only</h2>
+                        <p>This game is best experienced on a desktop or laptop screen. Please switch to a larger display to play Zombie Attack.</p>
+                    </div>
+
                     <div class="game-frame">
                         <iframe
                             class="game-embed"

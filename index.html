@@ -10,12 +10,24 @@
     <body>
         <header class="topbar">
             <a href="#home" class="brand">Tyler Evans</a>
+            <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="nav-tabs" aria-label="Primary">
                 <a href="#home" class="nav-tab active">Home</a>
                 <a href="#projects" class="nav-tab">Projects</a>
                 <a href="#cv" class="nav-tab">CV</a>
             </nav>
         </header>
+
+        <div class="nav-overlay" hidden></div>
+        <nav class="nav-drawer" aria-label="Mobile">
+            <a href="#home" class="nav-tab active">Home</a>
+            <a href="#projects" class="nav-tab">Projects</a>
+            <a href="#cv" class="nav-tab">CV</a>
+        </nav>
 
         <main>
             <section id="home" class="page-section home-section">
@@ -29,7 +41,7 @@
                     <div class="about-me-copy">
                         <h1>Tyler Evans</h1>
                         <p class="about-me-intro">
-                            About me
+                            Hi! I'm Tyler, a graduate from the University of York with a degree in Interactive Media. I am passionate about creating engaging and immersive experiences through game design and development. My work spans across video games, mobile applications, and web-based projects. Please take a look!
                         </p>
 
                         <div class="contact-links">
@@ -133,46 +145,43 @@
                 </div>
 
                 <div class="cv-download">
-                    <a href="Assets/Files/cv.pdf" download class="action-btn primary">
+                    <span class="action-btn primary disabled" aria-disabled="true" tabindex="-1">
                         <i class="fas fa-file-pdf"></i>
                         <span>Download CV</span>
-                    </a>
+                    </span>
                 </div>
 
                 <div class="cv-grid">
                     <article class="detail-card cv-card">
                         <h3>Education</h3>
                         <ul>
-                            <li>Graduate at the University of York</li>
-                            <li></li>
-                            <li></li>
+                            <li>Graduated at the University of York in 2026</li>
+                            <li>BSc in Interactive Media at a First Class Honours</li>
+                            <li>T-Level in Digital Production, Design and Development at Distinction</li>
                         </ul>
                     </article>
 
                     <article class="detail-card cv-card">
                         <h3>Work Experience</h3>
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
+                            <li>315-hour industry placement as part of the T-Level</li>
+                            <li>Looking for employment opportunities in the field of game development</li>                        </ul>
                     </article>
 
                     <article class="detail-card cv-card">
                         <h3>Skills</h3>
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li>Proficient in C#, HTML, CSS, JavaScript, Kotlin</li>
+                            <li>Experience with Unity, Android Studio, Visual Studio, GitHub</li>
+                            <li>Knowledge of game design principles and user experience design</li>
                         </ul>
                     </article>
 
                     <article class="detail-card cv-card">
                         <h3>Achievements</h3>
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li>Graduating with a First Class Honours degree from a Russell Group university</li>
+                            <li>Creation of <a href="deadend.html" rel="noopener noreferrer">Dead End</a>, a Unity-based zombie survival game with unique diegetic elements</li>
                         </ul>
                     </article>
                 </div>
