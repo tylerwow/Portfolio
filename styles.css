@@ -708,7 +708,17 @@ footer p {
         text-align: center;
     }
 
+    .email-container {
+        order: 2;
+        margin-top: 4px;
+    }
+
+    footer p {
+        order: 1;
+    }
+
     .social-icons {
+        order: 3;
         margin-left: 0;
     }
 }
