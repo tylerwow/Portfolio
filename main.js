@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = Array.from(document.querySelectorAll(".nav-tabs .nav-tab"));
     const drawerLinks = Array.from(document.querySelectorAll(".nav-drawer .nav-tab"));
     const sections = Array.from(document.querySelectorAll("main .page-section[id]"));
+    const projectFilters = Array.from(document.querySelectorAll(".project-filter"));
+    const projectCards = Array.from(document.querySelectorAll(".project-card[data-category]"));
 
     const closeDrawer = () => {
         if (!navDrawer || !navOverlay) {
@@ -59,6 +61,23 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!navLinks.length || !sections.length) {
         return;
     }
+
+    projectFilters.forEach((filterButton) => {
+        filterButton.addEventListener("click", () => {
+            const selectedFilter = filterButton.dataset.filter;
+
+            projectFilters.forEach((button) => {
+                const isSelected = button === filterButton;
+                button.classList.toggle("active", isSelected);
+                button.setAttribute("aria-pressed", String(isSelected));
+            });
+
+            projectCards.forEach((card) => {
+                const categories = card.dataset.category.split(/\s+/);
+                card.hidden = selectedFilter !== "all" && !categories.includes(selectedFilter);
+            });
+        });
+    });
 
     const setActiveTab = (activeId) => {
         const allLinks = [...navLinks, ...drawerLinks];

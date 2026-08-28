@@ -62,12 +62,22 @@
 
             <section id="projects" class="page-section">
                 <div class="section-heading">
-                    <h2>Projects</h2>
+                    <div class="projects-heading-row">
+                        <h2>Projects</h2>
+                        <div class="project-filters" aria-label="Filter projects" role="group">
+                            <button class="project-filter active" type="button" data-filter="all" aria-pressed="true">All</button>
+                            <button class="project-filter" type="button" data-filter="games" aria-pressed="false">Games</button>
+                            <button class="project-filter" type="button" data-filter="web" aria-pressed="false">Web</button>
+                            <button class="project-filter" type="button" data-filter="mobile" aria-pressed="false">Mobile</button>
+                            <button class="project-filter" type="button" data-filter="ux-ui" aria-pressed="false">UX/UI</button>
+                            <button class="project-filter" type="button" data-filter="research" aria-pressed="false">Research</button>
+                        </div>
+                    </div>
                     <p>Select a project to explore more details.</p>
                 </div>
 
                 <div class="project-grid">
-                    <a class="project-card" href="deadend.html">
+                    <a class="project-card" data-category="games research" href="deadend.html">
                         <img src="Assets/Images/DeadEnd.png" alt="Project preview">
                         <div class="project-content">
                             <h3 class="home-project-title">
@@ -78,58 +88,74 @@
                         </div>
                     </a>
 
-                    <a class="project-card" href="snapandseek.html">
+                    <a class="project-card" data-category="mobile games ux-ui" href="snapandseek.html">
                         <img src="Assets/Images/SnapAndSeek1.png" alt="Project preview">
                         <div class="project-content">
-                            <h3>Snap + Seek</h3>
+                            <h3>Snap + Seek <span class="project-category-label">Mobile</span></h3>
                             <p>An Android-based mobile game using machine learning.</p>
                         </div>
                     </a>
 
-                    <a class="project-card" href="cosmiccrisis.html">
+                    <a class="project-card" data-category="games" href="cosmiccrisis.html">
                         <img src="Assets/Images/CosmicCrisis.png" alt="Project preview">
                         <div class="project-content">
-                            <h3>Cosmic Crisis</h3>
+                            <h3>Cosmic Crisis <span class="project-category-label">Game</span></h3>
                             <p>A VR-based escape room set in a spaceship.</p>
                         </div>
                     </a>
 
-                    <a class="project-card" href="templeswitch.html">
+                    <a class="project-card" data-category="ux-ui mobile" href="openair.html">
+                        <img src="Assets/Images/OpenAir.png" alt="Project preview">
+                        <div class="project-content">
+                            <h3>OpenAir <span class="project-category-label">UX/UI</span></h3>
+                            <p>A speculative design project tackling air quality.</p>
+                        </div>
+                    </a>
+
+                    <a class="project-card" data-category="games" href="templeswitch.html">
                         <img src="Assets/Images/TempleSwitch6.png" alt="Project preview">
                         <div class="project-content">
-                            <h3>Temple Switch</h3>
+                            <h3>Temple Switch <span class="project-category-label">Game</span></h3>
                             <p>A 2D- and 3D-hybrid puzzle platformer.</p>
                         </div>
                     </a>
 
-                    <a class="project-card" href="quizmybrain.html">
+                    <a class="project-card" data-category="web games" href="quizmybrain.html">
                         <img src="Assets/Images/QuizMyBrain4.png" alt="Project preview">
                         <div class="project-content">
-                            <h3>QuizMyBrain</h3>
+                            <h3>QuizMyBrain <span class="project-category-label">Web</span></h3>
                             <p>A small web application which quizzes your knowledge.</p>
                         </div>
                     </a>
 
-                    <a class="project-card" href="rollout.html">
+                    <a class="project-card" data-category="ux-ui mobile research" href="barleyhall.html">
+                        <img src="Assets/Images/BarleyHall.png" alt="Project preview">
+                        <div class="project-content">
+                            <h3>Barley Hall<span class="project-category-label">UX/UI</span></h3>
+                            <p>A UX/UI design project for a museum in York.</p>
+                        </div>
+                    </a>
+
+                    <a class="project-card" data-category="games" href="rollout.html">
                         <img src="Assets/Images/Rollout1.png" alt="Project preview">
                         <div class="project-content">
-                            <h3>Rollout!</h3>
+                            <h3>Rollout! <span class="project-category-label">Game</span></h3>
                             <p>A physics-based ball-rolling platformer.</p>
                         </div>
                     </a>
 
-                    <a class="project-card" href="zombieattack.html">
+                    <a class="project-card" data-category="games web" href="zombieattack.html">
                         <img src="Assets/Images/ZombieAttack.png" alt="Project preview">
                         <div class="project-content">
-                            <h3>Zombie Attack</h3>
+                            <h3>Zombie Attack <span class="project-category-label">Game</span></h3>
                             <p>A web-based top-down zombie shooter.</p>
                         </div>
                     </a>
 
-                    <a class="project-card" href="horrorgameresearch.html">
+                    <a class="project-card" data-category="research" href="horrorgameresearch.html">
                         <img src="Assets/Images/HorrorGameResearch.png" alt="Project preview">
                         <div class="project-content">
-                            <h3>Horror Game Research</h3>
+                            <h3>Horror Game Research <span class="project-category-label">Research</span></h3>
                             <p>Research into how light levels affect player immersion.</p>
                         </div>
                     </a>

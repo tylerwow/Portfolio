@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>OpenAir | Tyler Evans</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="Assets/FontAwesome/css/all.css" type="text/css" rel="stylesheet">
+        <link href="styles.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="topbar">
+            <a href="index.html#home" class="brand">Tyler Evans</a>
+            <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-tabs" aria-label="Primary">
+                <a href="index.html#home" class="nav-tab">Home</a>
+                <a href="index.html#projects" class="nav-tab active">Projects</a>
+                <a href="index.html#cv" class="nav-tab">CV</a>
+            </nav>
+        </header>
+
+        <div class="nav-overlay" hidden></div>
+        <nav class="nav-drawer" aria-label="Mobile">
+            <a href="index.html#home" class="nav-tab">Home</a>
+            <a href="index.html#projects" class="nav-tab active">Projects</a>
+            <a href="index.html#cv" class="nav-tab">CV</a>
+        </nav>
+
+        <main class="project-page-main">
+            <a href="index.html#projects" class="back-link">← Back to Projects</a>
+
+            <section class="project-hero">
+                <div class="project-copy">
+                    <div class="project-page-tags">
+                        <span class="project-category-label">UX/UI</span>
+                        <span class="project-category-label">Mobile</span>
+                    </div>
+                    <h1>OpenAir</h1>
+                    <p class="project-description">
+                        OpenAir is a piece of speculative design exploring the commodidification of air. It provides users with a subscription service for access to purified, clean air in a world that has been overrun by pollution and climate change. Through a wearable filtration device, users can experience what breathing is supposed to feel like; they never have to inhale polluted air again.
+                    </p>
+                    <p class="project-description">
+                        The materials created for this design concept include a brochure, an advertisement campaign, and a prototype for a mobile application.
+                    </p>
+                    
+                    <div class="action-buttons">
+                        <a href="Assets/Files/OpenAirBrochure.pdf" download class="action-btn primary">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Brochure</span>
+                        </a>
+                        <a href="Assets/Files/OpenAirPrototype.mp4" download class="action-btn primary">
+                            <i class="fas fa-video"></i>
+                            <span>Prototype</span>
+                        </a>
+                        <a href="Assets/Files/OpenAirReport.pdf" download class="action-btn secondary">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Report</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-gallery">
+                    <div class="gallery-frame">
+                        <button class="gallery-arrow left" id="gallery-prev" type="button" aria-label="Previous image">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <img id="project-main-image" src="Assets/Images/OpenAir.png" alt="Project preview image">
+                        <button class="gallery-arrow right" id="gallery-next" type="button" aria-label="Next image">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-details">
+                <article class="detail-card">
+                    <h2>Why?</h2>
+                    <p>This project was created for the <a href="https://www.york.ac.uk/students/studying/manage/programmes/module-catalogue/module/TFT00068H/latest" target="_blank" rel="noopener noreferrer">Speculative Design</a> module at the University of York.</p>
+                </article>
+
+                <article class="detail-card">
+                    <h2>Tools</h2>
+                    <p>The brochure and advertisement material was created using Adobe Photoshop, while the prototype was built using Figma.</p>
+                </article>
+
+                <article class="detail-card">
+                    <h2>Outcome</h2>
+                    <p>This project earned a 1st class grade (72%).</p>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <div class="email-container">
+                <a href="mailto:tylerjoshuaevans2005@gmail.com" class="footer-email">tylerjoshuaevans2005@gmail.com</a>
+            </div>
+
+            <p>© <span id="year"></span> Tyler Evans. All rights reserved.</p>
+            
+            <div class="social-icons">
+                <a href="https://github.com/tylerwow" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/tyler-evans-uk" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </footer>
+
+        <script src="home.js"></script>
+        <script src="main.js"></script>
+        <script>
+            const images = [
+                'Assets/Images/OpenAir.png',
+                'Assets/Images/OpenAir1.png',
+                'Assets/Images/OpenAir2.png',
+                'Assets/Images/OpenAir3.png',
+                'Assets/Images/OpenAir4.png',
+                'Assets/Images/OpenAir5.png',
+                'Assets/Images/OpenAir6.png',
+            ];
+            const mainImage = document.getElementById('project-main-image');
+            const prevButton = document.getElementById('gallery-prev');
+            const nextButton = document.getElementById('gallery-next');
+            let activeIndex = 0;
+
+            const updateGallery = () => {
+                mainImage.src = images[activeIndex];
+                prevButton.disabled = activeIndex === 0;
+                nextButton.disabled = activeIndex === images.length - 1;
+            };
+
+            prevButton.addEventListener('click', () => {
+                if (activeIndex > 0) {
+                    activeIndex -= 1;
+                    updateGallery();
+                }
+            });
+
+            nextButton.addEventListener('click', () => {
+                if (activeIndex < images.length - 1) {
+                    activeIndex += 1;
+                    updateGallery();
+                }
+            });
+
+            updateGallery();
+        </script>
+    </body>
+</html>
