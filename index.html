@@ -8,19 +8,27 @@
         <link href="styles.css" type="text/css" rel="stylesheet">
     </head>
     <body>
-        <header class="topbar">
-            <a href="#home" class="brand">Tyler Evans</a>
-            <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav class="nav-tabs" aria-label="Primary">
-                <a href="#home" class="nav-tab active">Home</a>
-                <a href="#projects" class="nav-tab">Projects</a>
-                <a href="#cv" class="nav-tab">CV</a>
-            </nav>
-        </header>
+        <div class="site-header">
+            <header class="topbar">
+                <a href="#home" class="brand">Tyler Evans</a>
+                <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav-tabs" aria-label="Primary">
+                    <a href="#home" class="nav-tab active">Home</a>
+                    <a href="#projects" class="nav-tab">Projects</a>
+                    <a href="#cv" class="nav-tab">CV</a>
+                </nav>
+            </header>
+
+            <aside class="portfolio-notice" aria-label="Portfolio update notice">
+                <i class="fas fa-exclamation-triangle notice-icon" aria-hidden="true"></i>
+                <span>This portfolio will be undergoing future updates to improve its visual design and usability.</span>
+                <button class="notice-close" type="button" aria-label="Dismiss update notice">&times;</button>
+            </aside>
+        </div>
 
         <div class="nav-overlay" hidden></div>
         <nav class="nav-drawer" aria-label="Mobile">

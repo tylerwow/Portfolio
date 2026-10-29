@@ -18,17 +18,54 @@ h1 {
     font-size: 4rem;
 }
 
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
 .topbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
     background-color: white;
-    border-bottom: 1px solid #e0e0e0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
     opacity: 0.98;
+}
+
+.portfolio-notice {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 24px;
+    background-color: #ffda36;
+    color: #472500;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.notice-icon {
+    flex: 0 0 auto;
+}
+
+.notice-close {
+    flex: 0 0 32px;
+    margin-left: auto;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: inherit;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.notice-close:hover,
+.notice-close:focus-visible {
+    background: rgba(71, 37, 0, 0.12);
 }
 
 .brand {
